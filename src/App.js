@@ -5,6 +5,7 @@ import Feed from "./components/Feed";
 import PopUp from "./components/PopUp";
 const App = () => {
   const [user, setUser] = useState(null);
+
   const userId = "cf0fd3bd-8f70-4a13-b056-0b63b0e99c5a";
 
   const getUser = async () => {
@@ -19,11 +20,12 @@ const App = () => {
   useEffect(() => {
     getUser();
   }, []);
+  console.log(user);
 
   return (
     <>
       <div className="app">
-        <Nav url={user.instagram_url} />
+        <Nav />
         <Header />
         <Feed />
         {/*<PopUp/>*/}
