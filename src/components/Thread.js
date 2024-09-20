@@ -55,8 +55,8 @@ const Thread = () => {
         </svg>
       </div>
       <p>
-        <span>x replies</span>
-        <span>x likes · </span>
+        <span className="sub-text">x replies ·</span>
+        <span className="sub-text"> x likes </span>
       </p>
     </article>
   );

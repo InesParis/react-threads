@@ -1,7 +1,7 @@
-import Thread from "./Thread";
+import Thread from "./Thread.js";
 const Feed = () => {
   return (
-    <div classname="feed">
+    <div className="feed">
       <Thread />
     </div>
   );
