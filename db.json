@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user_uuid": "cf0fd3bd-8f70-4a13-b056-0b63b0e99c5a",
+      "username": "Paris Librarian",
+      "handle": "paris.librarian",
+      "bio": "Books📚 and coding 👩🏻‍💻 if possible in the middle of nature 🌱",
+      "link": "https://github.com/InesParis",
+      "img": "https://i.imgur.com/ImSVYNk.jpeg",
+      "instagram_url": "https://www.instagram.com/paris.librarian/?hl=en",
+      "followers": [
+        {
+          "user_uuid": "d95b838b-010d-4154-ac27-675c785c1df4"
+        },
+        { "user_uuid": "a71aa388-57a0-4546-801c-52b3314191ff" }
+      ]
+    },
+    {
+      "id": 2,
+      "user_uuid": "d95b838b-010d-4154-ac27-675c785c1df4",
+      "username": "Angelica Dow",
+      "handle": "Angelica.Dow",
+      "bio": "I love baking and sharing my creations online",
+      "link": "https://angelicadowbakes.com",
+      "img": "https://i.imgur.com/TocznSU.jpeg",
+      "instagram_url": "https://www.instagram.com/angelica.dow/?hl=en",
+      "followers": [
+        {
+          "user_uuid": "cf0fd3bd-8f70-4a13-b056-0b63b0e99c5a"
+        },
+        { "user_uuid": "a71aa388-57a0-4546-801c-52b3314191ff" }
+      ]
+    },
+    {
+      "id": 3,
+      "user_uuid": "a71aa388-57a0-4546-801c-52b3314191ff",
+      "username": "John Mononymous ",
+      "handle": "John.M",
+      "bio": "Language Teacher",
+      "link": "https://johnmlanguageteacher.com",
+      "img": "https://i.imgur.com/tUi9p4R.jpeg",
+      "instagram_url": "https://www.instagram.com/john.m/?hl=en",
+      "followers": [
+        {
+          "user_uuid": "cf0fd3bd-8f70-4a13-b056-0b63b0e99c5a"
+        },
+        { "user_uuid": "d95b838b-010d-4154-ac27-675c785c1df4" }
+      ]
+    }
+  ],
+  "threads": [
+    {
+      "id": 0,
+      "timestamp": "Fri Sep 20 2024 13:24:07 GMT+0200 (Central European Summer Time)",
+      "thread_from": "cf0fd3bd-8f70-4a13-b056-0b63b0e99c5a",
+      "thread_to": null,
+      "reply_to": null,
+      "text": "Hello from the other side of threads!",
+      "likes": [
+        {
+          "uuid": "d95b838b-010d-4154-ac27-675c785c1df4"
+        }
+      ]
+    }
+  ]
+}
