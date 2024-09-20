@@ -9,13 +9,11 @@ const App = () => {
   const userId = "cf0fd3bd-8f70-4a13-b056-0b63b0e99c5a";
 
   const getUser = async () => {
-    try {
-      const response = await fetch(
-        `http://localhost:3000/users?user_uuid=${userId}`
-      );
-      const data = await response.json();
-      setUser(data[0]);
-    } catch (error) {}
+    const response = await fetch(
+      `http://localhost:3000/users?user_uuid=${userId}`
+    );
+    const data = await response.json();
+    setUser(data[0]);
   };
   useEffect(() => {
     getUser();
