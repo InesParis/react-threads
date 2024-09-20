@@ -11,13 +11,14 @@ const Header = () => {
         <div className="img-container">
           <img src="" alt="progile avatar" />
         </div>
-        <p>bio</p>
-        <div className="sub-info-container">
-          <p className="sub-text">
-            x followers · <a href="">link</a>
-          </p>
-        </div>
       </div>
+      <p>bio</p>
+      <div className="sub-info-container">
+        <p className="sub-text">
+          x followers · <a href="">link</a>
+        </p>
+      </div>
+
       <button
         className="primary"
         onClick={() => navigator.clipboard.writeText("I am an URL")}
@@ -25,7 +26,7 @@ const Header = () => {
         Share Profile
       </button>
       <div className="button-container">
-        <button>Threads</button>
+        <button className="current">Threads</button>
         <button>Replies</button>
       </div>
     </header>
