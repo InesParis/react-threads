@@ -3,19 +3,20 @@ const Header = ({ user }) => {
     <header>
       <div className="info-container">
         <div className="user-info-container">
-          <h1>username</h1>
+          <h1>{user.username}</h1>
           <p>
-            handle
+            {user.handle}
             <span className="threads-info">threds.net</span>
           </p>
         </div>
         <div className="img-container">
-          <img src="" alt="progile avatar" />
+          <img src={user.img} alt="progile avatar" />
         </div>
       </div>
-      <p></p>
+      <p>{user.bio}</p>
       <div className="sub-info-container">
         <p className="sub-text">
+          {user.followers.length}
           followers · <a href="">link</a>
         </p>
       </div>

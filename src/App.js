@@ -9,11 +9,15 @@ const App = () => {
   const userId = "cf0fd3bd-8f70-4a13-b056-0b63b0e99c5a";
 
   const getUser = async () => {
-    const response = await fetch(
-      `http://localhost:3000/users?user_uuid=${userId}`
-    );
-    const data = await response.json();
-    setUser(data[0]);
+    try {
+      const response = await fetch(
+        `http://localhost:3000/users?user_uuid=${userId}`
+      );
+      const data = await response.json();
+      setUser(data[0]);
+    } catch (error) {
+      console.error(error);
+    }
   };
   useEffect(() => {
     getUser();
@@ -22,12 +26,14 @@ const App = () => {
 
   return (
     <>
-      <div className="app">
-        <Nav />
-        <Header />
-        <Feed />
-        {/*<PopUp/>*/}
-      </div>
+      {user && (
+        <div className="app">
+          <Nav url={user.instagram_url} />
+          <Header user={user} />
+          <Feed />
+          {/*<PopUp/>*/}
+        </div>
+      )}
     </>
   );
 };
