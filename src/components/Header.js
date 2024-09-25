@@ -15,10 +15,7 @@ const Header = ({ user }) => {
       </div>
       <p>{user.bio}</p>
       <div className="sub-info-container">
-        <p className="sub-text">
-          {user.followers.length}
-          followers · <a href="">link</a>
-        </p>
+        <p className="sub-text">{user.followers.length} followers ·</p>
       </div>
 
       <button
