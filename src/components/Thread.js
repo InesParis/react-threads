@@ -1,16 +1,17 @@
-const Thread = () => {
+const Thread = ({ user, filteredThread }) => {
+  if (!user || !filteredThread) return null;
   return (
     <article className="feed-card">
       <div className="text-container">
         <div>
           <div className="img-container">
-            <img src="" alt="profile avatar" />
+            <img src={user.img} alt="profile avatar" />
           </div>
           <div>
             <p>
-              <strong>handle</strong>
+              <strong>{user.handle}</strong>
             </p>
-            <p>text</p>
+            <p>{filteredThread.text}</p>
           </div>
         </div>
         <p className="sub-text">time</p>
@@ -55,8 +56,8 @@ const Thread = () => {
         </svg>
       </div>
       <p>
-        <span className="sub-text">x replies ·</span>
-        <span className="sub-text"> x likes </span>
+        <span className="sub-text">{filteredThread.replies} replies ·</span>
+        <span className="sub-text"> {filteredThread.likes}x likes </span>
       </p>
     </article>
   );
