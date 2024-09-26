@@ -10,7 +10,7 @@ const Header = ({ user, viewThreadsFeed, setViewThreadsFeed }) => {
           </p>
         </div>
         <div className="img-container">
-          <img src={user.img} alt="progile avatar" />
+          <img src={user.img} alt="profile avatar" />
         </div>
       </div>
       <p>{user.bio}</p>

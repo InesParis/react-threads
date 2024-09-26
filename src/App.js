@@ -6,9 +6,9 @@ import userData from "./db.json";
 
 const App = () => {
   const [user, setUser] = useState(null);
-  const [threads, setThreads] = useState(null);
+  const [threads, setThreads] = useState([]);
   const [viewThreadsFeed, setViewThreadsFeed] = useState(true);
-  const [filteredThreads, setFilteredThreads] = useState(null);
+  const [filteredThreads, setFilteredThreads] = useState([]);
   const userId = "cf0fd3bd-8f70-4a13-b056-0b63b0e99c5a";
 
   useEffect(() => {
@@ -21,16 +21,20 @@ const App = () => {
   }, [userId]);
 
   const getThreadsFeed = () => {
-    if (viewThreadsFeed) {
-      const standAloneThreads = threads.filter(
-        (thread) => thread.reply_to === null
-      );
-      setFilteredThreads(standAloneThreads);
-    } else {
-      const replyThreads = threads?.filter(
-        (thread) => thread.reply_to !== null
-      );
-      setFilteredThreads(replyThreads);
+    if (threads && threads.length > 0) {
+      // Add this check to ensure threads exists
+      if (viewThreadsFeed)
+        if (viewThreadsFeed) {
+          const standAloneThreads = threads.filter(
+            (thread) => thread.reply_to === null
+          );
+          setFilteredThreads(standAloneThreads);
+        } else {
+          const replyThreads = threads?.filter(
+            (thread) => thread.reply_to !== null
+          );
+          setFilteredThreads(replyThreads);
+        }
     }
   };
 

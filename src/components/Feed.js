@@ -1,17 +1,13 @@
 import Thread from "./Thread.js";
 
-const Feed = ({ user, filteredThreads }) => {
-  if (!filteredThreads || filteredThreads.length === 0) {
+const Feed = ({ user, threads }) => {
+  if (!threads || threads.length === 0) {
     return <div>No threads available</div>;
   }
   return (
     <div className="feed">
-      {filteredThreads.map((filteredThread) => (
-        <Thread
-          key={filteredThread.id}
-          user={user}
-          filteredThread={filteredThread}
-        />
+      {threads.map((thread) => (
+        <Thread key={thread.id} user={user} filteredThread={thread} />
       ))}
     </div>
   );
