@@ -14,10 +14,8 @@ const App = () => {
   useEffect(() => {
     const foundUser = userData.users.find((user) => user.user_uuid === userId);
     setUser(foundUser);
-    const getThreads = userData.threads.filter(
-      (thread) => thread.thread_from === userId
-    );
-    setThreads(getThreads);
+
+    setThreads(userData.threads);
   }, [userId]);
 
   const getThreadsFeed = () => {
